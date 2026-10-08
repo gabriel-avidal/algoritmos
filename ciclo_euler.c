@@ -80,7 +80,6 @@ int enfileira(Fila* fi, int pv) {
     fi->v[fi->final] = pv;
     fi->final = (fi->final + 1) % MAX;
     fi->qtd++;
-    printf("Enfileirando %d ...\n", pv);
     return 1;
 }
 
@@ -90,7 +89,6 @@ int desenfileira(Fila* fi) {
     int iPos = (fi->inicio) % MAX;
     fi->inicio = (fi->inicio + 1) % MAX;
     fi->qtd--;
-    printf("Desenfileirei.\n");
     return fi->v[iPos];
 }
 
